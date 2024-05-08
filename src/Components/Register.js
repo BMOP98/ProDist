@@ -9,7 +9,7 @@ const Registro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const resp = await axios.post('http://localhost:5000/registro', { nombre, apellido, correo, contraseña });
+      const resp = await axios.post('http://iniciosesion-d94c8532333b.herokuapp.com/registro', { nombre, apellido, correo, contraseña });
       if(resp){
         alert("Usuario Creado Exitosamente");
         window.location.href = "/"
