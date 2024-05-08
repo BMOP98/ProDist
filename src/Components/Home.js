@@ -20,7 +20,7 @@ const Home = () =>{
         var item_valueid = sessionStorage.getItem("item_key");
         const MisDatos = async () => {
             try {
-                const resp = await fetch("http://localhost:5000/datos/" + item_valueid);
+                const resp = await fetch("http://iniciosesion-d94c8532333b.herokuapp.com:46259/datos/" + item_valueid);
                 const data1 = await resp.json();
                 
                 if (!data1.Nombre) {
