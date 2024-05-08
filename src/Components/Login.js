@@ -22,7 +22,7 @@ class Login extends Component {
     const { username, password } = this.state;
     // Aquí podrías realizar la autenticación con una API, una base de datos, etc.
     // Por ahora, simplemente imprimiremos los datos en la consola
-    const a = await fetch("http://iniciosesion-d94c8532333b.herokuapp.com:46259/registro/" + username + "/" + password)
+    const a = await fetch("http://iniciosesion-d94c8532333b.herokuapp.com:28947/registro/" + username + "/" + password)
     const data_res = await a.json();
     if(data_res.length === 0){
       alert("Correo o Contraseña Incorrectos");
