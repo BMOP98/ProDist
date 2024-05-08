@@ -15,7 +15,6 @@ const Registro = () => {
         window.location.href = "/"
       }
       
-      // Puedes redirigir al usuario a otra página aquí si lo deseas
     } catch (error) {
       console.error('Error al registrar:', error);
       alert('Hubo un error al registrar. Por favor, intenta de nuevo más tarde.');
