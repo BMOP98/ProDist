@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(cors({
-  origin: ['http://iniciosesion-d94c8532333b.herokuapp.com', 'https://iniciosesion-d94c8532333b.herokuapp.com'],
+  origin: '*',
   methods: 'GET,POST,OPTIONS',
   allowedHeaders: 'Content-Type,Authorization',
 }));
