@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+
 
 app.use(bodyParser.json());
 app.use(cors({
@@ -79,6 +79,6 @@ app.get('/datos/:id', async(req, res)=>{
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor backend corriendo en el puerto ${PORT}`);
-});
+
+
+module.exports = app;
