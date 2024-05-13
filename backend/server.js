@@ -13,6 +13,10 @@ app.use(cors({
   allowedHeaders: 'Content-Type,Authorization',
 }));
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ message: 'Servidor en funcionamiento' });
+});
+
 // Conexión a la base de datos
 mongoose.connect("mongodb+srv://maximo98:BMOPpineda1@cluster0.gqrlqzi.mongodb.net/", {
   useNewUrlParser: true,
