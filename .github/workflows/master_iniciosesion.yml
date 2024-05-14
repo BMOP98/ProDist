@@ -22,7 +22,7 @@ jobs:
         run: cd backend
 
       - name: Install dependencies
-        run: npm install --prefix server
+        run: npm install
 
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
