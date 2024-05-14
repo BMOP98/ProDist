@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-
+const PORT = 5000;
 
 app.use(bodyParser.json());
 app.use(cors({
@@ -12,10 +12,6 @@ app.use(cors({
   methods: 'GET,POST,OPTIONS',
   allowedHeaders: 'Content-Type,Authorization',
 }));
-
-app.get('/health', (req, res) => {
-  res.status(200).json({ message: 'Servidor en funcionamiento' });
-});
 
 // Conexión a la base de datos
 mongoose.connect("mongodb+srv://maximo98:BMOPpineda1@cluster0.gqrlqzi.mongodb.net/", {
@@ -79,6 +75,6 @@ app.get('/datos/:id', async(req, res)=>{
   }
 });
 
-
-
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Servidor backend corriendo en el puerto ${PORT}`);
+});
