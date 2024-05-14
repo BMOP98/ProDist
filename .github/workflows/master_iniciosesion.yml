@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "18"
+      - name: Ingresar a la carpeta
+        run: cd backend
 
       - name: Install dependencies
         run: npm install --prefix server
@@ -29,6 +31,8 @@ jobs:
           heroku_app_name: "server11"
           heroku_email: "maximo.98@hotmail.com"
           build_dir: "server"
+      - name: Saliendo de la carpeta
+        run: cd ..
   job-2:
     runs-on: ubuntu-latest
     steps:
@@ -38,6 +42,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "18"
+      - name: Ingresar a la carpeta
+        run: cd client
       - name: Install dependencies
         run: npm install --prefix client
       - name: Build
@@ -49,3 +55,5 @@ jobs:
           heroku_app_name: "iniciosesion"
           heroku_email: "maximo.98@hotmail.com"
           build_dir: "client/build"
+      - name: Salir de la carpeta
+        run: cd ..
