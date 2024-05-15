@@ -36,7 +36,7 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <div class="login-container">
-        <h2 class="login-title">Iniciar sesiónn</h2>
+        <h2 class="login-title">Iniciar sesión</h2>
         <form onSubmit={this.handleSubmit}>
           <div class="form-group">
             <label>Usuario:</label>
@@ -59,7 +59,7 @@ class Login extends Component {
             />
           </div>
           <div class="button-group">
-            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
             <Link to="/register" class="btn btn-secondary">Registrarse</Link>
           </div>
         </form>
