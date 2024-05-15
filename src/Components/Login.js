@@ -29,12 +29,7 @@ class Login extends Component {
     }else{
       sessionStorage.setItem("item_key", data_res.usuario._id)
       window.location.href = "/Home"
-    }
-
-    
-
-    // Supongamos que la autenticación es exitosa, establecemos isLoggedIn en true
-    
+    } 
   }
 
   render() {
@@ -64,7 +59,7 @@ class Login extends Component {
             />
           </div>
           <div class="button-group">
-            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
             <Link to="/register" class="btn btn-secondary">Registrarse</Link>
           </div>
         </form>
